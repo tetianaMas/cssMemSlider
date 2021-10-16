@@ -25,14 +25,15 @@ body {
 
 img {
   max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 2%;
   object-fit: fill;
 }
 
 .container {
-  padding: 2% 3% 3%;
-  max-width: 54vw;
+  padding: 0 10% 4%;
+  max-width: 70vw;
   background-color: var(--mint-color);
   border-radius: 2%;
   box-shadow: 0 0 0.8rem 0.1rem var(--super-dark-mint);
@@ -79,7 +80,7 @@ p {
 }
 
 .slider-controls {
-  margin-right: -0.8rem;
+  margin-right: -0.3rem;
   display: flex;
   align-items: center;
 }
@@ -111,8 +112,10 @@ p {
 
 .text-item {
   display: none;
+  margin-top: -0.6rem;
   opacity: 0;
   font-size: 2rem;
+  line-height: 0;
 }
 
 .slider-text {
@@ -126,6 +129,7 @@ input {
 }
 
 .controls-container {
+  margin-bottom: 10%;
   display: flex;
   justify-content: space-between;
 }
@@ -213,5 +217,91 @@ input {
     transform: translateX(0) scale(1);
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@media screen and (max-width: 1182px) {
+  .container {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .text-item {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .container {
+    padding: 0 6% 4%;
+  }
+
+  .img-container {
+    height: 34vw;
+  }
+
+  @keyframes showSlide {
+    from {
+      transform: translateX(25%) scale(1.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+    to {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .controls-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .slider-controls {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .slider-text {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .text-item {
+    margin-top: 0;
+    line-height: 3rem;
+  }
+
+  @keyframes showSlide {
+    from {
+      transform: translateX(100%) scale(1.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+    to {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container {
+    max-width: 90vw;
+  }
+
+  .img-container {
+    height: 42vw;
   }
 }

@@ -1,8 +1,7 @@
 :root {
-  --mint-color: #bffce6;
-  --dark-mint-color: #65dcb4;
-  --super-dark-mint: #56b595;
-  --pink-color: #ff738e;
+  --main-color: #a7b0ee;
+  --dark-color: #4b5ab6;
+  --super-dark-color: #343e7e;
 }
 
 * {
@@ -15,12 +14,12 @@
 
 html {
   font-family: 'Pacifico', cursive;
-  color: var(--super-dark-mint);
+  color: var(--super-dark-color);
 }
 
 body {
   margin: 0;
-  background-color: var(--dark-mint-color);
+  background-color: var(--dark-color);
 }
 
 img {
@@ -34,9 +33,9 @@ img {
 .container {
   padding: 0 10% 4%;
   max-width: 70vw;
-  background-color: var(--mint-color);
+  background-color: var(--main-color);
   border-radius: 2%;
-  box-shadow: 0 0 0.8rem 0.1rem var(--super-dark-mint);
+  box-shadow: 0 0 0.8rem 0.1rem var(--super-dark-color);
 }
 
 h1 {
@@ -62,7 +61,7 @@ p {
   max-width: 100%;
   overflow: hidden;
   border-radius: 2%;
-  box-shadow: 0 0 1rem 0.1rem var(--super-dark-mint);
+  box-shadow: 0 0 1rem 0.1rem var(--super-dark-color);
 }
 
 .img-container {
@@ -99,15 +98,20 @@ p {
   display: inline-block;
   width: 1rem;
   height: 1rem;
-  border: 0.2rem solid var(--super-dark-mint);
+  border: 0.2rem solid var(--super-dark-color);
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 0 1rem 0.03rem var(--super-dark-mint);
+  box-shadow: 0 0 1rem 0.03rem var(--super-dark-color);
   transition: all 0.3s ease-in;
 }
 
 .slider-controls label:hover .slider-btn {
-  background-color: var(--super-dark-mint);
+  background-color: var(--super-dark-color);
+}
+
+.slider-text {
+  width: 600%;
+  overflow: hidden;
 }
 
 .text-item {
@@ -116,6 +120,7 @@ p {
   opacity: 0;
   font-size: 2rem;
   line-height: 0;
+  transition: all 0.5s ease-in;
 }
 
 .slider-text {
@@ -142,10 +147,6 @@ input {
   margin-left: -17%;
 }
 
-#img2:checked ~ .slider-text > .text-item:nth-of-type(2) {
-  display: block;
-}
-
 #img3:checked ~ .slider .img-container > .slider-img:first-of-type {
   margin-left: -34%;
 }
@@ -168,9 +169,10 @@ input {
 #img4:checked ~ .controls-container #text4,
 #img5:checked ~ .controls-container #text5,
 #img6:checked ~ .controls-container #text6 {
+  animation: showSlide 0.5s alternate;
+  animation-iteration-count: 1;
   display: block;
   opacity: 1;
-  animation: showSlide 0.5s alternate;
 }
 
 #img1:checked
@@ -203,20 +205,22 @@ input {
   .slider-controls
   > label:nth-of-type(6)
   .slider-btn {
-  background-color: var(--super-dark-mint);
+  background-color: var(--super-dark-color);
 }
 
 @keyframes showSlide {
-  from {
-    transform: translateX(40%) scale(1.5);
-
+  0% {
+    display: none;
     opacity: 0;
-    visibility: hidden;
   }
-  to {
-    transform: translateX(0) scale(1);
+  1% {
+    display: block;
+    opacity: 0;
+    transform: translateX(40%) scale(1.5);
+  }
+  100% {
     opacity: 1;
-    visibility: visible;
+    transform: translateX(0) scale(1);
   }
 }
 
@@ -248,15 +252,18 @@ input {
   }
 
   @keyframes showSlide {
-    from {
-      transform: translateX(25%) scale(1.5);
+    0% {
+      display: none;
       opacity: 0;
-      visibility: hidden;
     }
-    to {
-      transform: translateX(0) scale(1);
+    1% {
+      display: block;
+      opacity: 0;
+      transform: translateX(25%) scale(1.5);
+    }
+    100% {
       opacity: 1;
-      visibility: visible;
+      transform: translateX(0) scale(1);
     }
   }
 }
@@ -283,25 +290,32 @@ input {
   }
 
   @keyframes showSlide {
-    from {
-      transform: translateX(100%) scale(1.5);
+    0% {
+      display: none;
       opacity: 0;
-      visibility: hidden;
     }
-    to {
-      transform: translateX(0) scale(1);
+    30% {
+      display: block;
+      opacity: 0;
+      transform: translateX(100%) scale(1.5);
+    }
+    100% {
       opacity: 1;
-      visibility: visible;
+      transform: translateX(0) scale(1);
     }
   }
 }
 
 @media screen and (max-width: 460px) {
+  html {
+    overflow-y: hidden;
+  }
   .container {
+    min-height: 100vw;
     max-width: 90vw;
   }
 
   .img-container {
-    height: 42vw;
+    height: 48vw;
   }
 }

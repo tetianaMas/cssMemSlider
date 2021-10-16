@@ -8,25 +8,24 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@700&display=swap"
+    rel="stylesheet">
   <title>cssMemSlider</title>
 </head>
 
 <body>
   <main class="main">
     <div class="container">
-      <h1>Imagine living your life like a frontender...</h1>
+      <h1>Front-end TV</h1>
+      <input type="radio" name="slider-radio" id="img1" checked>
+      <input type="radio" name="slider-radio" id="img2">
+      <input type="radio" name="slider-radio" id="img3">
+      <input type="radio" name="slider-radio" id="img4">
+      <input type="radio" name="slider-radio" id="img5">
+      <input type="radio" name="slider-radio" id="img6">
 
       <div class="slider">
-        <input type="radio" name="slider-radio" id="img1" checked>
-        <input type="radio" name="slider-radio" id="img2">
-        <input type="radio" name="slider-radio" id="img3">
-        <input type="radio" name="slider-radio" id="img4">
-        <input type="radio" name="slider-radio" id="img5">
-        <input type="radio" name="slider-radio" id="img6">
         <div class="img-container">
-
-
           <div class="slider-img">
             <img src="./assets/img/1.jpg" alt="slider img">
           </div>
@@ -40,7 +39,7 @@
             <img src="./assets/img/4.jpg" alt="slider img">
           </div>
           <div class="slider-img">
-            <img src="./assets/img/5.png" alt="slider img">
+            <img src="./assets/img/5.jpg" alt="slider img">
           </div>
           <div class="slider-img">
             <img src="./assets/img/6.jpg" alt="slider img">
@@ -48,14 +47,38 @@
         </div>
       </div>
 
-      <div class="slider-controls">
-        <label for="img1">@</label>
-        <label for="img2">@</label>
-        <label for="img3">@</label>
-        <label for="img4">@</label>
-        <label for="img5">@</label>
-        <label for="img6">@</label>
+      <div class="controls-container">
+        <div class="slider-text">
+          <span class="text-item" id="text1">Doing markup</span>
+          <span class="text-item" id="text2">Learning JS basics</span>
+          <span class="text-item" id="text3">Traversing a tree</span>
+          <span class="text-item" id="text4">Trying to refactor your code</span>
+          <span class="text-item" id="text5">Got your first internship</span>
+          <span class="text-item" id="text6">Starting new pet-project</span>
+        </div>
+
+        <div class="slider-controls">
+          <label for="img1">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img2">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img3">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img4">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img5">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img6">
+            <span class="slider-btn"></span>
+          </label>
+        </div>
       </div>
+
     </div>
   </main>
 

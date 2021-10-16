@@ -1,0 +1,83 @@
+html {
+  font-family: 'Indie Flower', cursive;
+  text-shadow: aliceblue;
+}
+
+body {
+  margin: 0;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2%;
+  object-fit: fill;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+}
+
+.container {
+  max-width: 54vw;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  max-width: 54vw;
+  overflow: hidden;
+}
+
+.img-container {
+  width: 600%;
+  height: 30vw;
+  display: flex;
+}
+
+.slider-img {
+  width: 17%;
+  height: 100%;
+  display: flex;
+  transition: 0.5s ease;
+}
+
+input {
+  visibility: hidden;
+}
+
+#img1:checked ~ .img-container > .slider-img:first-of-type {
+  margin-left: 0;
+}
+
+#img2:checked ~ .img-container > .slider-img:first-of-type {
+  margin-left: -17%;
+}
+
+#img3:checked ~ .img-container > .slider-img:first-of-type {
+  margin-left: -34%;
+}
+
+#img4:checked ~ .img-container > .slider-img:first-of-type {
+  margin-left: -51%;
+}
+
+#img5:checked ~ .img-container > .slider-img:first-of-type {
+  margin-left: -68%;
+}
+
+#img6:checked ~ .img-container > .slider-img:first-of-type {
+  margin-left: -85%;
+}

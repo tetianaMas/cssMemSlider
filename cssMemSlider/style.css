@@ -79,13 +79,14 @@ p {
 }
 
 .slider-controls {
+  margin-right: -0.8rem;
   display: flex;
   align-items: center;
 }
 
 .slider-controls label {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   width: 2.5rem;
   height: 3rem;
@@ -100,7 +101,7 @@ p {
   border: 0.2rem solid var(--super-dark-mint);
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 0 0.7rem 0.1rem var(--super-dark-mint);
+  box-shadow: 0 0 1rem 0.03rem var(--super-dark-mint);
   transition: all 0.3s ease-in;
 }
 

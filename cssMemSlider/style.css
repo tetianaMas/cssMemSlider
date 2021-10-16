@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 html {
   font-family: 'Pacifico', cursive;
   color: var(--super-dark-mint);

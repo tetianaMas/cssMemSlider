@@ -1,7 +1,8 @@
 :root {
-  --main-color: #e4e4e4;
-  --dark-color: #383838;
-  --super-dark-color: #1c1c1c;
+  --main-color: #d0d0d0;
+  --dark-color: #292929;
+  --super-dark-color: #181818;
+  --white-color: #ffffff;
 }
 
 * {
@@ -39,22 +40,11 @@ img {
   box-shadow: 0 0 0.8rem 0.1rem var(--super-dark-color);
 }
 
-h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  letter-spacing: 0.2rem;
-  text-align: center;
-}
-
-p {
-  margin: 0;
-}
-
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .slider {
@@ -106,12 +96,14 @@ p {
 }
 
 .slider-controls label:hover .slider-btn {
-  background-color: var(--super-dark-color);
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
 }
 
 .slider-controls label:active .slider-btn {
-  animation: scale 0.8s;
-  background-color: var(--super-dark-color);
+  animation: scale 1s ease-in-out;
+  background-color: var(--dark-color);
+  border-color: var(--white-color);
 }
 
 .slider-text {
@@ -221,6 +213,44 @@ input {
   background-color: var(--super-dark-color);
 }
 
+#img1:checked
+  ~ .controls-container
+  .slider-controls
+  > label:nth-of-type(1):hover
+  .slider-btn,
+#img2:checked
+  ~ .controls-container
+  .slider-controls
+  > label:nth-of-type(2):hover
+  .slider-btn,
+#img3:checked
+  ~ .controls-container
+  .slider-controls
+  > label:nth-of-type(3):hover
+  .slider-btn,
+#img4:checked
+  ~ .controls-container
+  .slider-controls
+  > label:nth-of-type(4):hover
+  .slider-btn,
+#img5:checked
+  ~ .controls-container
+  .slider-controls
+  > label:nth-of-type(5):hover
+  .slider-btn,
+#img6:checked
+  ~ .controls-container
+  .slider-controls
+  > label:nth-of-type(6):hover
+  .slider-btn,
+#img7:checked
+  ~ .controls-container
+  .slider-controls
+  > label:nth-of-type(7):hover
+  .slider-btn {
+  background-color: var(--dark-color);
+}
+
 @keyframes showSlide {
   0% {
     display: none;
@@ -249,7 +279,7 @@ input {
   }
 }
 
-@media screen and (max-width: 1385px) {
+@media screen and (max-width: 1470px) {
   .container {
     max-width: 80vw;
   }
@@ -257,21 +287,25 @@ input {
   .text-item {
     font-size: 1.5rem;
   }
+
+  .img-container {
+    height: 36vw;
+  }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1072px) {
   html {
     font-size: 0.8rem;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .container {
     padding: 0 6% 4%;
   }
 
   .img-container {
-    height: 34vw;
+    height: 36vw;
   }
 
   .controls-container {
@@ -311,7 +345,7 @@ input {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 546px) {
   html {
     overflow-y: hidden;
     font-size: 0.6rem;
@@ -322,5 +356,11 @@ input {
 
   .img-container {
     height: 48vw;
+  }
+}
+
+@media screen and (max-width: 357px) {
+  html {
+    font-size: 0.5rem;
   }
 }

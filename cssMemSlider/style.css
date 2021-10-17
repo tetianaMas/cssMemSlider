@@ -1,7 +1,7 @@
 :root {
-  --main-color: #a7b0ee;
-  --dark-color: #112b52;
-  --super-dark-color: #101d54;
+  --main-color: #e4e4e4;
+  --dark-color: #383838;
+  --super-dark-color: #1c1c1c;
 }
 
 * {
@@ -102,11 +102,15 @@ p {
   border: 0.2rem solid var(--super-dark-color);
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 0 1rem 0.03rem var(--super-dark-color);
   transition: all 0.3s ease-in;
 }
 
 .slider-controls label:hover .slider-btn {
+  background-color: var(--super-dark-color);
+}
+
+.slider-controls label:active .slider-btn {
+  animation: scale 0.8s;
   background-color: var(--super-dark-color);
 }
 
@@ -175,7 +179,6 @@ input {
 #img6:checked ~ .controls-container #text6,
 #img7:checked ~ .controls-container #text7 {
   animation: showSlide 0.5s alternate;
-  animation-iteration-count: 1;
   display: block;
   opacity: 1;
 }
@@ -209,6 +212,11 @@ input {
   ~ .controls-container
   .slider-controls
   > label:nth-of-type(6)
+  .slider-btn,
+#img7:checked
+  ~ .controls-container
+  .slider-controls
+  > label:nth-of-type(7)
   .slider-btn {
   background-color: var(--super-dark-color);
 }
@@ -226,6 +234,18 @@ input {
   100% {
     opacity: 1;
     transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 

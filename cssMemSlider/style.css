@@ -297,7 +297,7 @@ input {
   }
 }
 
-@media screen and (max-width: 67.75em) {
+@media screen and (max-width: 77.125em) {
   html {
     font-size: 0.8rem;
   }
@@ -357,7 +357,7 @@ input {
     font-size: 0.6rem;
   }
   .container {
-    max-width: 89vw;
+    max-width: 90vw;
   }
 }
 

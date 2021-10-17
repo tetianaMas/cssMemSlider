@@ -57,14 +57,12 @@ img {
 
 .img-container {
   width: 700%;
-  height: 32vw;
   display: flex;
   border-radius: 0.5rem;
 }
 
 .slider-img {
   width: 14.28%;
-  height: 100%;
   display: flex;
   transition: margin-left 0.5s ease;
 }
@@ -281,19 +279,21 @@ input {
 
 @media screen and (max-width: 99.25em) {
   .container {
-    max-width: 70vw;
+    max-width: 71vw;
   }
 
   .text-item {
     font-size: 1.5rem;
   }
-
-  .img-container {
-    height: 36vw;
-  }
 }
 
 @media screen and (max-width: 79.5em) {
+  .container {
+    max-width: 70vw;
+  }
+}
+
+@media screen and (max-width: 67.75em) {
   html {
     font-size: 0.8rem;
   }
@@ -308,10 +308,6 @@ input {
 @media screen and (max-width: 53.125em) {
   .container {
     padding: 0 6% 4%;
-  }
-
-  .img-container {
-    height: 36vw;
   }
 
   .controls-container {
@@ -357,11 +353,7 @@ input {
     font-size: 0.6rem;
   }
   .container {
-    max-width: 90vw;
-  }
-
-  .img-container {
-    height: 48vw;
+    max-width: 89vw;
   }
 }
 

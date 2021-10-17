@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <title>cssMemSlider</title>
 </head>
+
 <body>
-  
+  <main class="main">
+    <div class="container">
+      <input type="radio" name="slider-radio" id="img1" checked>
+      <input type="radio" name="slider-radio" id="img2">
+      <input type="radio" name="slider-radio" id="img3">
+      <input type="radio" name="slider-radio" id="img4">
+      <input type="radio" name="slider-radio" id="img5">
+      <input type="radio" name="slider-radio" id="img6">
+      <input type="radio" name="slider-radio" id="img7">
+
+      <div class="slider">
+        <div class="img-container">
+          <div class="slider-img">
+            <img src="./assets/img/1.jpg" alt="slider img">
+          </div>
+          <div class="slider-img">
+            <img src="./assets/img/2.jpg" alt="slider img">
+          </div>
+          <div class="slider-img">
+            <img src="./assets/img/3.jpg" alt="slider img">
+          </div>
+          <div class="slider-img">
+            <img src="./assets/img/4.jpg" alt="slider img">
+          </div>
+          <div class="slider-img">
+            <img src="./assets/img/5.jpg" alt="slider img">
+          </div>
+          <div class="slider-img">
+            <img src="./assets/img/6.jpg" alt="slider img">
+          </div>
+          <div class="slider-img">
+            <img src="./assets/img/7.jpg" alt="slider img">
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <div class="slider-text">
+          <div class="text-item" id="text1">Trying to refactor your code</div>
+          <div class="text-item" id="text2">Learning JS basics</div>
+          <div class="text-item" id="text3">Traversing a tree</div>
+          <div class="text-item" id="text4">We are playing a game, aren't we?</div>
+          <div class="text-item" id="text5">Starting a new pet-project</div>
+          <div class="text-item" id="text6">Got your first internship</div>
+          <div class="text-item" id="text7">Doing a desktop-first markup</div>
+        </div>
+
+        <div class="slider-controls">
+          <label for="img1">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img2">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img3">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img4">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img5">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img6">
+            <span class="slider-btn"></span>
+          </label>
+          <label for="img7">
+            <span class="slider-btn"></span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </main>
 </body>
+
 </html>

@@ -279,7 +279,7 @@ input {
   }
 }
 
-@media screen and (max-width: 1588px) {
+@media screen and (max-width: 99.25em) {
   .container {
     max-width: 70vw;
   }
@@ -293,19 +293,19 @@ input {
   }
 }
 
-@media screen and (max-width: 1272px) {
+@media screen and (max-width: 79.5em) {
   html {
     font-size: 0.8rem;
   }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 63.75em) {
   .text-item {
     font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 53.125em) {
   .container {
     padding: 0 6% 4%;
   }
@@ -351,7 +351,7 @@ input {
   }
 }
 
-@media screen and (max-width: 546px) {
+@media screen and (max-width: 34.125em) {
   html {
     overflow-y: hidden;
     font-size: 0.6rem;
@@ -365,7 +365,7 @@ input {
   }
 }
 
-@media screen and (max-width: 357px) {
+@media screen and (max-width: 22.3125em) {
   html {
     font-size: 0.5rem;
   }

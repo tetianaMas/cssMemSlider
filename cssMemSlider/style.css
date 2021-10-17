@@ -33,8 +33,8 @@ img {
 }
 
 .container {
-  padding: 0 5% 4%;
-  max-width: 70vw;
+  padding: 2% 5% 4%;
+  max-width: 65vw;
   background-color: var(--main-color);
   border-radius: 1rem;
   box-shadow: 0 0 0.8rem 0.1rem var(--super-dark-color);
@@ -52,7 +52,7 @@ img {
   max-width: 100%;
   overflow: hidden;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem 0.1rem var(--super-dark-color);
+  box-shadow: 0 0 1rem 0.001rem var(--super-dark-color);
 }
 
 .img-container {
@@ -281,7 +281,7 @@ input {
 
 @media screen and (max-width: 1470px) {
   .container {
-    max-width: 80vw;
+    max-width: 70vw;
   }
 
   .text-item {
@@ -293,9 +293,15 @@ input {
   }
 }
 
-@media screen and (max-width: 1072px) {
+@media screen and (max-width: 1272px) {
   html {
     font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .text-item {
+    font-size: 1rem;
   }
 }
 
